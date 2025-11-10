@@ -1,0 +1,541 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`SeatMap component переключает места в забронированное состояние и наоборот корректно 1`] = `
+<div>
+  <div
+    class="flex justify-center"
+  >
+    <div
+      class="py-2 pr-2 flex flex-col gap-y-[4px] shrink-0"
+    >
+      <div
+        class=""
+      >
+        <span>
+          Ряд 
+          1
+        </span>
+      </div>
+      <div
+        class=""
+      >
+        <span>
+          Ряд 
+          2
+        </span>
+      </div>
+      <div
+        class=""
+      >
+        <span>
+          Ряд 
+          3
+        </span>
+      </div>
+      <div
+        class=""
+      >
+        <span>
+          Ряд 
+          4
+        </span>
+      </div>
+      <div
+        class=""
+      >
+        <span>
+          Ряд 
+          5
+        </span>
+      </div>
+    </div>
+    <div
+      class="grid p-2 gap-x-[6.5px] gap-y-[4px] overflow-x-auto"
+      style="grid-template-columns: repeat(8, 1fr);"
+    >
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 1, место 1"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border bg-[#154163]"
+          data-testid="seat_1_1"
+          disabled=""
+        >
+          1
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 1, место 2"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border bg-[#154163]"
+          data-testid="seat_1_2"
+          disabled=""
+        >
+          2
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 1, место 3"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_1_3"
+        >
+          3
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 1, место 4"
+          aria-pressed="true"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border bg-[#B76969]"
+          data-testid="seat_1_4"
+        >
+          4
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 1, место 5"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_1_5"
+        >
+          5
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 1, место 6"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_1_6"
+        >
+          6
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 1, место 7"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_1_7"
+        >
+          7
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 1, место 8"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_1_8"
+        >
+          8
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 2, место 1"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_2_1"
+        >
+          1
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 2, место 2"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_2_2"
+        >
+          2
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 2, место 3"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_2_3"
+        >
+          3
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 2, место 4"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_2_4"
+        >
+          4
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 2, место 5"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_2_5"
+        >
+          5
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 2, место 6"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_2_6"
+        >
+          6
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 2, место 7"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_2_7"
+        >
+          7
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 2, место 8"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_2_8"
+        >
+          8
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 3, место 1"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_3_1"
+        >
+          1
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 3, место 2"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_3_2"
+        >
+          2
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 3, место 3"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_3_3"
+        >
+          3
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 3, место 4"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_3_4"
+        >
+          4
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 3, место 5"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_3_5"
+        >
+          5
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 3, место 6"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_3_6"
+        >
+          6
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 3, место 7"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_3_7"
+        >
+          7
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 3, место 8"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_3_8"
+        >
+          8
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 4, место 1"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_4_1"
+        >
+          1
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 4, место 2"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_4_2"
+        >
+          2
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 4, место 3"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_4_3"
+        >
+          3
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 4, место 4"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_4_4"
+        >
+          4
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 4, место 5"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_4_5"
+        >
+          5
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 4, место 6"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_4_6"
+        >
+          6
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 4, место 7"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_4_7"
+        >
+          7
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 4, место 8"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_4_8"
+        >
+          8
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 5, место 1"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_5_1"
+        >
+          1
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 5, место 2"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_5_2"
+        >
+          2
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 5, место 3"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_5_3"
+        >
+          3
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 5, место 4"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_5_4"
+        >
+          4
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 5, место 5"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_5_5"
+        >
+          5
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 5, место 6"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_5_6"
+        >
+          6
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 5, место 7"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_5_7"
+        >
+          7
+        </button>
+      </div>
+      <div
+        class="flex justify-center items-center"
+      >
+        <button
+          aria-label="Ряд 5, место 8"
+          aria-pressed="false"
+          class="size-[20px] text-[14px] rounded-[5px] flex items-center justify-center border "
+          data-testid="seat_5_8"
+        >
+          8
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
