@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { FC } from "react";
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     className?: string;
@@ -10,7 +10,7 @@ interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     props?: any
 }
 
-const Input: React.FC<InputProps> = ({ className, type, name, text, ...props }) => {
+const Input: FC<InputProps> = ({ className, type, name, text, ...props }) => {
     return (
         <>
             <label htmlFor={name} className="text-xs mb-1">{text}</label>

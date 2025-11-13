@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import BookingsListItem from '@/components/BookingsListItem';
+import BookingsListItem from '@/components/features/BookingsListItem/BookingsListItem';
 import { BookingType } from '@/types';
 import { UUID } from 'crypto';
 

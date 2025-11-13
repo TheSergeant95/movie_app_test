@@ -44,7 +44,7 @@ const Button: FC<ButtonProps> = ({
             onClick={onClick}
             type={type}
         >
-            {children || `Button default`}
+            {children || `Button`}
         </button>
     );
 };

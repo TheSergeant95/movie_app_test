@@ -1,11 +1,12 @@
 import { setBookingAsPaid } from "@/http/itemAPI";
+import { HTTP_STATUS } from "@/utils/constaints";
 import { UUID } from "crypto";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function POST(req: NextRequest, { params }: { params: Promise<{ id: UUID }> }) {
     const bookingId = (await params).id;
     const res = await setBookingAsPaid(bookingId);
-    if (res.status !== 200) {
+    if (res.status !== HTTP_STATUS.OK) {
         return NextResponse.json({ message: res.message }, { status: res.status });
     }
 

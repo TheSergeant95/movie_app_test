@@ -7,7 +7,7 @@ interface ContentBlockProps {
 const ContentBlock: FC<ContentBlockProps> = ({ children, className }) => {
     return (
         <div className={`pr-[80px] overflow-y-auto w-full max-h-full ${className}`}>
-            {children}
+            {children || ''}
         </div>
     )
 }

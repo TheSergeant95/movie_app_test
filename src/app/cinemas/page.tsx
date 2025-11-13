@@ -1,12 +1,13 @@
 import React from "react";
-import CinemaListItem from "@/components/CinemaListItem";
+import { CinemaListItem } from "@/components/features/CinemaListItem";
 import { CinemaType } from "@/types";
 import { getData } from "@/utils/getData";
-import ContentBlock from "@/components/layout/ContentBlock";
+import { ContentBlock } from "@/components/layout/ContentBlock";
+import { HTTP_STATUS } from "@/utils/constaints";
 
 const Page = async () => {
     const res = await getData("cinema/all");
-    if (res?.status && res.status == 404) {
+    if (res?.status && res.status == HTTP_STATUS.NOT_FOUND) {
         return <div className="p-2 text-center">Кинотеатры не найдены</div>;
     }
     const { data } = res;

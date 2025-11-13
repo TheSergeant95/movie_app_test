@@ -1,6 +1,6 @@
 "use client";
 import { convertMilisecondsToMMSSFormat } from '@/utils/utils';
-import React, { useEffect, useState } from 'react';
+import React, { FC, useEffect, useState } from 'react';
 
 interface CountdownTimerProps {
     targetDate: Date;
@@ -9,17 +9,15 @@ interface CountdownTimerProps {
     onTimeout?: () => void;
 }
 
-const CountdownTimer: React.FC<CountdownTimerProps> = ({ targetDate, startTime, timeLimit, onTimeout }) => {
+const CountdownTimer: FC<CountdownTimerProps> = ({ targetDate, startTime, timeLimit, onTimeout }) => {
     const calculateTimeLeft = () => {
         let endDate = startTime ? new Date(startTime).getTime() : null;
         const endDateForLimit = new Date(targetDate).getTime() + timeLimit * 1000;
         if (!endDate || endDateForLimit < endDate) {
             endDate = endDateForLimit;
         }
-        let difference = endDate - new Date().getTime();
-        if (difference < 0) {
-            difference = 0;
-        }
+        const difference = Math.max(0, endDate - Date.now());
+
         return difference;
     };
 

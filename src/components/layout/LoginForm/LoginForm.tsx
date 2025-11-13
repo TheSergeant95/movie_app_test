@@ -1,7 +1,7 @@
 "use client"
 import React, { FC } from "react";
-import Button from "../Button";
-import Input from "../Input";
+import { Button } from "@/components/ui/Button";
+import { Input } from "@/components/ui/Input";
 
 interface LoginFormProps {
     onSubmit: (formData: FormData) => Promise<void>;

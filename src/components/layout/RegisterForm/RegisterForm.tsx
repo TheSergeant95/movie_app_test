@@ -3,8 +3,8 @@ import React, { FC } from "react";
 import { FieldError, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import Input from "../Input";
-import Button from "../Button";
+import { Input } from "@/components/ui/Input";
+import { Button } from "@/components/ui/Button";
 import { UserCredentialsType } from "@/types";
 
 interface RegisterFormProps {
@@ -32,7 +32,7 @@ const RegisterErrorField: FC<{ error?: FieldError }> = ({ error }) => (
   </div>
 );
 
-const RegisterForm: React.FC<RegisterFormProps> = ({ onSubmit, error }) => {
+const RegisterForm: FC<RegisterFormProps> = ({ onSubmit, error }) => {
   const { register, handleSubmit, formState: { errors } } = useForm<RegisterData>({ resolver: zodResolver(registerSchema) });
 
   return (

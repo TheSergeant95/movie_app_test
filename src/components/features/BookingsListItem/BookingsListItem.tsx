@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { FC } from "react";
 import { BookingType, SeatPositionType } from "@/types";
 import { formatDate, formatTime } from "@/utils/utils";
 
@@ -8,7 +8,7 @@ interface BookingsListItemProps {
     children?: React.ReactNode
 }
 
-const BookingsListItem: React.FC<BookingsListItemProps> = ({ booking, children }) => {
+const BookingsListItem: FC<BookingsListItemProps> = ({ booking, children }) => {
     return (
         <>
             <div>
@@ -21,7 +21,7 @@ const BookingsListItem: React.FC<BookingsListItemProps> = ({ booking, children }
                     <p key={seatIndex}>Ряд {seat.rowNumber}, место {seat.seatNumber}</p>
                 ))}
             </div>
-            {children ? children : <div className="col-span-2"></div>}
+            {children || <div className="col-span-2"></div>}
         </>
     )
 }

@@ -1,22 +1,18 @@
 "use client";
-import React, { FC, useCallback, useMemo, useState } from "react";
-import Button from "../Button";
-import { useRouter } from "next/navigation";
-import { AvailableSeats, SeatPositionType } from "@/types";
-import { postData } from "@/utils/postData";
+import React, { FC, useCallback, useMemo } from "react";
+import { SeatPositionType } from "@/types";
 
 interface SeatMapProps {
-  seats: AvailableSeats;
-  bookedSeats?: SeatPositionType[];
+  rows: number;
+  seatsPerRow: number;
+  bookedSeats: SeatPositionType[];
   sessionId: number;
   readonly?: boolean;
-  selected: Set<string>;
+  selected?: Set<string>;
   setSelected: (selected: Set<string>) => void;
 }
 
-const SeatMap: FC<SeatMapProps> = ({ seats, bookedSeats = [], readonly = false, selected = new Set(), setSelected }) => {
-  const rows = seats.rows ?? 10;
-  const cols = seats.seatsPerRow ?? 8;
+const SeatMap: FC<SeatMapProps> = ({ rows, seatsPerRow, bookedSeats, readonly = false, selected = new Set(), setSelected }) => {
   const bookedSet = useMemo(() => new Set(bookedSeats.map((s: SeatPositionType) => `${s.rowNumber}-${s.seatNumber}`)), [bookedSeats]);
 
   const toggle = useCallback(
@@ -39,10 +35,10 @@ const SeatMap: FC<SeatMapProps> = ({ seats, bookedSeats = [], readonly = false, 
             </div>
           ))}
         </div>
-        <div className="grid p-2 gap-x-[6.5px] gap-y-[4px] overflow-x-auto" style={{ gridTemplateColumns: `repeat(${cols}, 1fr)` }}>
+        <div className="grid p-2 gap-x-[6.5px] gap-y-[4px] overflow-x-auto" style={{ gridTemplateColumns: `repeat(${seatsPerRow}, 1fr)` }}>
           {Array.from({ length: rows }).map((_, r) => (
             <React.Fragment key={r + 1}>
-              {Array.from({ length: cols }).map((_, c) => {
+              {Array.from({ length: seatsPerRow }).map((_, c) => {
                 const key = `${r + 1}-${c + 1}`;
                 const isBooked = bookedSet.has(key);
                 const isSelected = selected.has(key);

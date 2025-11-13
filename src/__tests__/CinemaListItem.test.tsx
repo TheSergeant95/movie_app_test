@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { CinemaType } from "@/types";
-import CinemaListItem from "@/components/CinemaListItem";
+import CinemaListItem from "@/components/features/CinemaListItem/CinemaListItem";
 
 describe("CinemaListItem component", () => {
     it("рендерится корректно", () => {

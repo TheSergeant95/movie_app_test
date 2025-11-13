@@ -1,15 +1,16 @@
 import { fetchCinemasList, fetchMovieSession, fetchMoviesList, fetchUserBookings } from "@/http/itemAPI";
 import { BookingType, CinemaType, MovieType } from "@/types";
+import { HTTP_STATUS } from "@/utils/constaints";
 import { NextRequest, NextResponse } from "next/server";
 
 export async function GET(req: NextRequest) {
     const res = await fetchUserBookings(req);
 
-    if (res.status !== 200) {
+    if (res.status !== HTTP_STATUS.OK) {
         return NextResponse.json({ message: res.message }, { status: res.status });
     }
     let data = res?.data?.filter((booking: BookingType) => !!booking.movieSessionId) || [];
-    if (!data || data.length == 0) return NextResponse.json({ message: 'No bookings found' }, { status: 404 });
+    if (!data || data.length == 0) return NextResponse.json({ message: 'No bookings found' }, { status: HTTP_STATUS.NOT_FOUND });
 
     data = await populateIDs(data);
     data = await populateCinemaData(data);
@@ -21,7 +22,7 @@ export async function GET(req: NextRequest) {
 async function populateIDs(data: BookingType[]) {
     for (const booking of data) {
         const sessionRes = await fetchMovieSession(booking.movieSessionId);
-        if (sessionRes.status == 200) {
+        if (sessionRes.status == HTTP_STATUS.OK) {
             const session = sessionRes.data;
             if (session) {
                 booking.movieId = session.movieId;
@@ -35,7 +36,7 @@ async function populateIDs(data: BookingType[]) {
 
 async function populateCinemaData(data: BookingType[]) {
     const moviesRes = await fetchMoviesList();
-    if (moviesRes.status == 200) {
+    if (moviesRes.status == HTTP_STATUS.OK) {
         const movies: MovieType[] = moviesRes?.data || [];
         data.forEach((booking: BookingType) => {
             if (!booking.movieId) return;
@@ -48,7 +49,7 @@ async function populateCinemaData(data: BookingType[]) {
 
 async function populateMovieData(data: BookingType[]) {
     const cinemasRes = await fetchCinemasList();
-    if (cinemasRes.status == 200) {
+    if (cinemasRes.status == HTTP_STATUS.OK) {
         const cinemas: CinemaType[] = cinemasRes?.data || [];
         data.forEach((booking: BookingType) => {
             if (!booking.cinemaId) return;

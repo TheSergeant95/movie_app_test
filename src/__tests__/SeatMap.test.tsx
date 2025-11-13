@@ -1,6 +1,6 @@
 import React from "react";
 import { render, fireEvent, waitFor, screen } from "@testing-library/react";
-import SeatMap from "@/components/layout/SeatMap";
+import SeatMap from "@/components/features/SeatMap";
 import { AvailableSeats, SeatPositionType } from "@/types";
 
 describe("SeatMap component", () => {

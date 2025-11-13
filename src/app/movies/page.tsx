@@ -1,12 +1,13 @@
 import React from "react";
-import ContentBlock from "@/components/layout/ContentBlock";
-import MovieListItem from "@/components/MovieListItem";
+import { ContentBlock } from "@/components/layout/ContentBlock";
+import { MovieListItem } from "@/components/features/MovieListItem";
 import { MovieType } from "@/types";
 import { getData } from "@/utils/getData";
+import { HTTP_STATUS } from "@/utils/constaints";
 
 const Page = async () => {
     const res = await getData("movie/all");
-    if (res?.status && res.status == 404) {
+    if (res?.status && res.status == HTTP_STATUS.NOT_FOUND) {
         return <div>Фильмы не найдены</div>;
     }
 

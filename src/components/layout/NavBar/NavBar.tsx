@@ -1,9 +1,9 @@
 "use client"
-import React, { FC, useCallback } from "react";
-import { loginNavItems, navItems } from "../constants/nav-items";
-import NavItem from "../NavItem";
+import React, { FC } from "react";
+import { loginNavItems, navItems } from "../../../utils/constaints";
+import { NavItem } from "../NavItem";
 import { usePathname, useRouter } from "next/navigation";
-import Button from "../Button";
+import { Button } from "../../ui/Button";
 import { useAuth } from "@/hooks/useAuth";
 
 const NavBar: FC = () => {

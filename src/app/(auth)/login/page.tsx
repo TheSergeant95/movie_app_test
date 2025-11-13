@@ -1,11 +1,12 @@
 "use client";
-import ContentBlock from "@/components/layout/ContentBlock";
-import LoginForm from "@/components/layout/LoginForm";
-import SubtitleBlock from "@/components/SubtitleBlock";
+import { ContentBlock } from "@/components/layout/ContentBlock";
+import { LoginForm } from "@/components/layout/LoginForm";
+import { SubtitleBlock } from "@/components/ui/SubtitleBlock";
 import { useAuth } from "@/hooks/useAuth";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
+import Link from "next/link";
+import { HTTP_STATUS } from "@/utils/constaints";
 
 export default function Page() {
   const { isAuth, loginUser } = useAuth();
@@ -16,14 +17,14 @@ export default function Page() {
     const username = formData.get('username');
     const password = formData.get('password');
     const res = await loginUser(username?.toString() || '', password?.toString() || '');
-    if (res?.status && res.status == 200) {
+    if (res?.status && res.status == HTTP_STATUS.OK) {
       router.push('/bookings');
     }
-    if (res?.status && res.status !== 200) {
+    if (res?.status && res.status !== HTTP_STATUS.OK) {
       setError(res.message);
     }
   }, []);
-  
+
   useEffect(() => {
     if (isAuth) {
       router.push('/bookings');

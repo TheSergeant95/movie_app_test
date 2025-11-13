@@ -1,6 +1,6 @@
-import React from "react";
+import React, { FC } from "react";
 
-const Loading = () => {
+const Loading: FC = () => {
   return (
     <svg
       className="animate-spin -ms-1 me-3 h-8 w-8"

@@ -1,8 +1,7 @@
-import NavBar from "@/components/layout/NavBar";
+import { NavBar } from "@/components/layout/NavBar";
 import "./globals.css";
-import { cookies } from "next/headers";
 import { AppContextProvider } from "@/context/AuthContext";
-import TitleBlock from "@/components/TitleBlock";
+import { TitleBlock } from "@/components/ui/TitleBlock";
 
 export const metadata = {
     title: "Тестовое приложение",

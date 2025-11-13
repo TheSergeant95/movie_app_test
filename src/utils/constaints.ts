@@ -15,3 +15,15 @@ export const navItems: NavItem<Route>[] = [
 export const loginNavItems: NavItem<Route>[] = [
   { href: `/login`, label: 'Вход', activeRoutes: ['/login', '/register'] },
 ]
+
+export const HTTP_STATUS = {
+  OK: 200,
+  NOT_FOUND: 404,
+  UNAUTHORIZED: 401,
+  INTERNAL_SERVER_ERROR: 500
+};
+
+export const TIME = {
+  MAX_AGE: 3600,
+  DEFAULT_PAYMENT_LIMIT: 180,
+};

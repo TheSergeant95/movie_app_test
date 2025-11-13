@@ -1,7 +1,8 @@
 import React, { FC } from "react";
-import Button from "@/components/Button";
+import { Button } from "@/components/ui/Button";
 import { convertMinutesToHHMMFormat } from "@/utils/utils";
 import { MovieType } from "@/types";
+import Image from "next/image";
 
 interface MovieListItemProps {
     data: MovieType;
@@ -11,7 +12,7 @@ interface MovieListItemProps {
 const MovieListItem: FC<MovieListItemProps> = ({ data, imageSize = "size-[43px]" }) => {
     return (
         <>
-            <img src={`${process.env.NEXT_APP_STATIC_URL}${data.posterImage}`} alt={data.title} className={`${imageSize} object-cover`} />
+            <Image src={`${process.env.NEXT_APP_STATIC_URL}${data.posterImage}`} alt={data.title} className={`${imageSize} object-cover`} />
             <h3>{data.title}</h3>
             <p>{convertMinutesToHHMMFormat(data.lengthMinutes)}</p>
             <p>{data.rating}</p>

@@ -1,5 +1,5 @@
 import { render, screen, act } from '@testing-library/react';
-import CountdownTimer from '@/components/CountdownTimer';
+import { CountdownTimer } from '@/components/ui/CountdownTimer';
 
 jest.useFakeTimers();
 

@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import Input from "@/components/Input";
+import { Input } from "@/components/ui/Input";
 
 describe("Input component", () => {
   it("рендерится инпут с плейсхолдером", () => {
